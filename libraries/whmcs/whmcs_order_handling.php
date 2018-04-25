@@ -10,7 +10,7 @@
 
 
 require_once "whmcs_base.php";
-class Whmcs_order_handling extends WHMCS_Base{
+class whmcs_order_handling extends whmcs_Base{
 	/**
 	*  Add a new order to the system.
 	*
@@ -59,7 +59,7 @@ class Whmcs_order_handling extends WHMCS_Base{
     * http://docs.whmcs.com/API:Add_Order
     */
 
-	public function whmcs_add_order($params = array()) {
+	public static function whmcs_add_order($params = array()) {
 	    $params['action'] = 'addorder';
 	    return Whmcs_base::send_request($params);
   	}
@@ -86,7 +86,7 @@ class Whmcs_order_handling extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Orders
 	*/
 
-	public function whmcs_get_orders($params = array()) {
+	public static function whmcs_get_orders($params = array()) {
 		$params['action'] = 'getorders';
 		return Whmcs_base::send_request($params);
 	}
@@ -111,7 +111,7 @@ class Whmcs_order_handling extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Products
 	*/
 
-	public function whmcs_get_products($params = array()) {
+	public static function whmcs_get_products($params = array()) {
 		$params['action'] = 'getproducts';
 		return Whmcs_base::send_request($params);
 	}
@@ -134,7 +134,7 @@ class Whmcs_order_handling extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Promotions
 	*/
 
-	public function whmcs_get_promotions($params = array()) {
+	public static function whmcs_get_promotions($params = array()) {
 		$params['action'] = 'getpromotions';
 		return Whmcs_base::send_request($params);
 	}
@@ -157,7 +157,7 @@ class Whmcs_order_handling extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Order_Statuses
 	*/
 
-	public function whmcs_get_order_statuses($params = array()) {
+	public static function whmcs_get_order_statuses($params = array()) {
 		$params['action'] = 'getorderstatuses';
 		return Whmcs_base::send_request($params);
 	}
@@ -185,7 +185,7 @@ class Whmcs_order_handling extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Accept_Order
 	*/
 
-	public function whmcs_accept_order($params = array()) {
+	public static function whmcs_accept_order($params = array()) {
 		$params['action'] = 'acceptorder';
 		return Whmcs_base::send_request($params);
 	}
@@ -208,7 +208,7 @@ class Whmcs_order_handling extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Pending_Order
 	*/
 
-	public function whmcs_pending_order($params = array()) {
+	public static function whmcs_pending_order($params = array()) {
 		$params['action'] = 'pendingorder';
 		return Whmcs_base::send_request($params);
 	}
@@ -231,7 +231,7 @@ class Whmcs_order_handling extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Cancel_Order
 	*/
 
-	public function whmcs_cancel_order($params = array()) {
+	public static function whmcs_cancel_order($params = array()) {
 		$params['action'] = 'cancelorder';
 		return Whmcs_base::send_request($params);
 	}
@@ -255,7 +255,7 @@ class Whmcs_order_handling extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Fraud_Order
 	*/
 
-	public function whmcs_fraud_order($params = array()) {
+	public static function whmcs_fraud_order($params = array()) {
 		$params['action'] = 'fraudorder';
 		return Whmcs_base::send_request($params);
 	}
@@ -278,7 +278,7 @@ class Whmcs_order_handling extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Delete_Order
 	*/
 
-	public function whmcs_delete_order($params = array()) {
+	public static function whmcs_delete_order($params = array()) {
 		$params['action'] = 'deleteorder';
 		return Whmcs_base::send_request($params);
 	}

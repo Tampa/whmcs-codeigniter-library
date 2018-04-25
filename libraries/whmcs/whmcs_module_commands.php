@@ -10,7 +10,7 @@
 
 
 require_once "whmcs_base.php";
-class Whmcs_module_commands {
+class whmcs_module_commands {
 	
 	// --------------------------------------------------------------------***************
 	/**
@@ -29,7 +29,7 @@ class Whmcs_module_commands {
 	* http://docs.whmcs.com/API:Module_Create
 	*/
 
-	public function whmcs_module_create($params = array()) {
+	public static function whmcs_module_create($params = array()) {
 		$params['action'] = 'modulecreate';
 		return Whmcs_base::send_request($params);
 	}
@@ -51,7 +51,7 @@ class Whmcs_module_commands {
 	* http://docs.whmcs.com/API:Module_Suspend
 	*/
 
-	public function whmcs_module_suspend($params = array()) {
+	public static function whmcs_module_suspend($params = array()) {
 		$params['action'] = 'modulesuspend';
 		return Whmcs_base::send_request($params);
 	}
@@ -73,7 +73,7 @@ class Whmcs_module_commands {
 	* http://docs.whmcs.com/API:Module_Unsuspend
 	*/
 
-	public function whmcs_module_unsuspend($params = array()) {
+	public static function whmcs_module_unsuspend($params = array()) {
 		$params['action'] = 'moduleunsuspend';
 		return Whmcs_base::send_request($params);
 	}
@@ -95,7 +95,7 @@ class Whmcs_module_commands {
 	* http://docs.whmcs.com/API:Module_Terminate
 	*/
 
-	public function whmcs_module_terminate($params = array()) {
+	public static function whmcs_module_terminate($params = array()) {
 		$params['action'] = 'moduleterminate';
 		return Whmcs_base::send_request($params);
 	}
@@ -117,7 +117,7 @@ class Whmcs_module_commands {
 	* http://docs.whmcs.com/API:Module_Change_Package
 	*/
 
-	public function whmcs_module_change_package($params = array()) {
+	public static function whmcs_module_change_package($params = array()) {
 		$params['action'] = 'modulechangepackage';
 		return Whmcs_base::send_request($params);
 	}
@@ -139,7 +139,7 @@ class Whmcs_module_commands {
 	* http://docs.whmcs.com/API:Module_Change_Password
 	*/
 
-	public function whmcs_module_change_password($params = array()) {
+	public static function whmcs_module_change_password($params = array()) {
 		$params['action'] = 'modulechangepw';
 		return Whmcs_base::send_request($params);
 	}

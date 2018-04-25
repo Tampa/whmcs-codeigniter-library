@@ -9,7 +9,7 @@
 */
 
 require_once "whmcs_base.php";
-class Whmcs_payments_billing extends WHMCS_Base{	
+class whmcs_payments_billing extends whmcs_Base{	
 
 	/**
 	* This command can be used to obtain all the invoices for a particular client or in a particular status.
@@ -31,7 +31,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Invoices
 	*/
 
-	public function whmcs_get_invoices($params = array()) {
+	public static function whmcs_get_invoices($params = array()) {
 		$params['action'] = 'getinvoices';
 		return Whmcs_base::send_request($params);
 	}
@@ -54,7 +54,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Invoice
 	*/
 
-	public function whmcs_get_invoice($params = array()) {
+	public static function whmcs_get_invoice($params = array()) {
 		$params['action'] = 'getinvoice';
 		return Whmcs_base::send_request($params);
 	}
@@ -90,7 +90,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Create_Invoice
 	*/
 
-	public function whmcs_create_invoice($params = array()) {
+	public static function whmcs_create_invoice($params = array()) {
 		$params['action'] = 'createinvoice';
 		return Whmcs_base::send_request($params);
 	}
@@ -125,7 +125,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Update_Invoice
 	*/
 
-	public function whmcs_update_invoice($params = array()) {
+	public static function whmcs_update_invoice($params = array()) {
 		$params['action'] = 'updateinvoice';
 		return Whmcs_base::send_request($params);
 	}
@@ -153,7 +153,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Add_Invoice_Payment
 	*/
 
-	public function whmcs_add_invoice_payment($params = array()) {
+	public static function whmcs_add_invoice_payment($params = array()) {
 		$params['action'] = 'addinvoicepayment';
 		return Whmcs_base::send_request($params);
 	}
@@ -176,7 +176,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Capture_Payment
 	*/
 
-	public function  whmcs_capture_payment($params = array()) {
+	public static function  whmcs_capture_payment($params = array()) {
 		$params['action'] = 'capturepayment';
 		return Whmcs_base::send_request($params);
 	}
@@ -200,7 +200,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Apply_Credit
 	*/
 
-	public function  whmcs_apply_credit($params = array()) {
+	public static function  whmcs_apply_credit($params = array()) {
 		$params['action'] = 'applycredit';
 		return Whmcs_base::send_request($params);
 	}
@@ -230,7 +230,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Add_Billable_Item
 	*/
 
-	public function  whmcs_add_billable_item($params = array()) {
+	public static function  whmcs_add_billable_item($params = array()) {
 		$params['action'] = 'addbillableitem';
 		return Whmcs_base::send_request($params);
 	}
@@ -255,7 +255,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Add_Credit
 	*/
 
-	public function  whmcs_add_credit($params = array()) {
+	public static function  whmcs_add_credit($params = array()) {
 		$params['action'] = 'addcredit';
 		return Whmcs_base::send_request($params);
 	}
@@ -286,7 +286,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Add_Transaction
 	*/
 
-	public function  whmcs_add_transaction($params = array()) {
+	public static function  whmcs_add_transaction($params = array()) {
 		$params['action'] = 'addtransaction';
 		return Whmcs_base::send_request($params);
 	}
@@ -311,7 +311,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Transactions
 	*/
 
-	public function  whmcs_get_transactions($params = array()) {
+	public static function  whmcs_get_transactions($params = array()) {
 		$params['action'] = 'gettransactions';
 		return Whmcs_base::send_request($params);
 	}
@@ -345,7 +345,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Update_Transaction
 	*/
 
-	public function  whmcs_update_transaction($params = array()) {
+	public static function  whmcs_update_transaction($params = array()) {
 		$params['action'] = 'updatetransaction';
 		return Whmcs_base::send_request($params);
 	}
@@ -368,7 +368,7 @@ class Whmcs_payments_billing extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Payment_Methods
 	*/
 
-	public function  whmcs_get_payment_methods($params = array()) {
+	public static function  whmcs_get_payment_methods($params = array()) {
 		$params['action'] = 'getpaymentmethods';
 		return Whmcs_base::send_request($params);
 	}

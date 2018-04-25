@@ -9,28 +9,29 @@
 */
 
 
-define('WHMCS_URL', 'http://demo.whmcs.com/includes/api.php');
-define('WHMCS_USERNAME', 'username'); // username
-define('WHMCS_PASSWORD', md5('password')); //password should be in md5 
+define('WHMCS_URL', 'YOUR_URL/includes/api.php');
+define('WHMCS_IDENTIFIER', 'API_IDENTIFIER'); // username
+define('WHMCS_SECRET', 'API_SECRET'); //password should be in md5 
 
-class Whmcs_base{
 
-		function send_request($params = array()){
+class whmcs_base{
+
+		public static function send_request($params = array()){
 
 		if ( ! isset($params['action'])) {
 	      trigger_error("No API action set");
 	      exit;
 	    }
 
-	    if ( ! defined('WHMCS_USERNAME') || ! defined('WHMCS_PASSWORD') || ! defined('WHMCS_URL')) {
-	      trigger_error("Must set WHMCS_USERNAME, WHMCS_PASSWORD, and WHMCS_URL constants");
+	    if ( ! defined('WHMCS_IDENTIFIER') || ! defined('WHMCS_SECRET') || ! defined('WHMCS_URL')) {
+	      trigger_error("Must set WHMCS_IDENTIFIER, WHMCS_SECRET, and WHMCS_URL constants");
 	      exit;
 	    }
 
 	    $url=WHMCS_URL;
-	    $params['username'] = WHMCS_USERNAME;
-	    $params['password'] = WHMCS_PASSWORD;	
-	    $params['accesskey'] = 's9!e8@c7u6r5e'; //secrete key
+	    $params['identifier'] = WHMCS_IDENTIFIER;
+	    $params['secret'] = WHMCS_SECRET;	
+	    //$params['accesskey'] = 's9!e8@c7u6r5e'; //secrete key
 		$params["responsetype"] = "json";
 		 
 		$query_string = "";
@@ -50,7 +51,7 @@ class Whmcs_base{
 
 		return $arr = json_decode($jsondata); # Decode JSON String
 
-		//print_r($arr); # Output XML Response as Array
+		print_r($arr); # Output XML Response as Array
 
 		/*
 		Debug Output - Uncomment if needed to troubleshoot problems

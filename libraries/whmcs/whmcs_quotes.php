@@ -10,7 +10,7 @@
 
 
 require_once "whmcs_base.php";
-class Whmcs_quotes extends WHMCS_Base{	
+class whmcs_quotes extends whmcs_Base{	
 	
 	/**
 	* This command is used to create a quote.
@@ -51,7 +51,7 @@ class Whmcs_quotes extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Create_Quote
 	*/
 
-	public function  whmcs_create_quote($params = array()) {
+	public static function  whmcs_create_quote($params = array()) {
 		$params['action'] = 'createquote';
 		return Whmcs_base::send_request($params);
 	}
@@ -99,7 +99,7 @@ class Whmcs_quotes extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Update_Quote
 	*/
 
-	public function  whmcs_update_quote($params = array()) {
+	public static function  whmcs_update_quote($params = array()) {
 		$params['action'] = 'updatequote';
 		return Whmcs_base::send_request($params);
 	}
@@ -122,7 +122,7 @@ class Whmcs_quotes extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Delete_Quote
 	*/
 
-	public function  whmcs_delete_quote($params = array()) {
+	public static function  whmcs_delete_quote($params = array()) {
 		$params['action'] = 'deletequote';
 		return Whmcs_base::send_request($params);
 	}
@@ -145,7 +145,7 @@ class Whmcs_quotes extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Send_Quote
 	*/
 
-	public function  whmcs_send_quote($params = array()) {
+	public static function  whmcs_send_quote($params = array()) {
 		$params['action'] = 'sendquote';
 		return Whmcs_base::send_request($params);
 	}
@@ -168,7 +168,7 @@ class Whmcs_quotes extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Accept_Quote
 	*/
 
-	public function  whmcs_accept_quote($params = array()) {
+	public static function  whmcs_accept_quote($params = array()) {
 		$params['action'] = 'acceptquote';
 		return Whmcs_base::send_request($params);
 	}
@@ -199,7 +199,7 @@ class Whmcs_quotes extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Quotes
 	*/
 
-	public function  whmcs_get_quotes($params = array()) {
+	public static function  whmcs_get_quotes($params = array()) {
 		$params['action'] = 'getquotes';
 		return Whmcs_base::send_request($params);
 	}

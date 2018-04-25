@@ -10,7 +10,7 @@
 
 
 require_once "whmcs_base.php";
-class Whmcs_miscellaneous{
+class whmcs_miscellaneous{
 		
 	/**
 	* This command is used to generate an XML list of the activity log
@@ -29,7 +29,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Get_Activity_Log
 	*/
 
-	public function whmcs_get_activity_log($params = array()) {
+	public static function whmcs_get_activity_log($params = array()) {
 		$params['action'] = 'getactivitylog';
 		return Whmcs_base::send_request($params);
 	}
@@ -52,7 +52,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Get_Admin_Details
 	*/
 
-	public function whmcs_get_admin_details($params = array()) {
+	public static function whmcs_get_admin_details($params = array()) {
 		$params['action'] = 'getadmindetails';
 		return Whmcs_base::send_request($params);
 	}
@@ -75,7 +75,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Update_Admin_Notes
 	*/
 
-	public function whmcs_update_admin_notes($params = array()) {
+	public static function whmcs_update_admin_notes($params = array()) {
 		$params['action'] = 'updateadminnotes';
 		return Whmcs_base::send_request($params);
 	}
@@ -98,7 +98,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Get_Currencies
 	*/
 
-	public function whmcs_get_currencies($params = array()) {
+	public static function whmcs_get_currencies($params = array()) {
 		$params['action'] = 'get_currencies';
 		return Whmcs_base::send_request($params);
 	}
@@ -121,7 +121,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Get_Promotions
 	*/
 
-	public function whmcs_get_promotions($params = array()) {
+	public static function whmcs_get_promotions($params = array()) {
 		$params['action'] = 'getpromotions';
 		return Whmcs_base::send_request($params);
 	}
@@ -144,7 +144,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Get_Client_Groups
 	*/
 
-	public function whmcs_get_client_groups($params = array()) {
+	public static function whmcs_get_client_groups($params = array()) {
 		$params['action'] = 'getclientgroups';
 		return Whmcs_base::send_request($params);
 	}
@@ -168,7 +168,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Get_Email_Templates
 	*/
 
-	public function whmcs_get_email_templates($params = array()) {
+	public static function whmcs_get_email_templates($params = array()) {
 		$params['action'] = 'getemailtemplates';
 		return Whmcs_base::send_request($params);
 	}
@@ -193,7 +193,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Get_To-Do_Items
 	*/
 
-	public function whmcs_get_todo_items($params = array()) {
+	public static function whmcs_get_todo_items($params = array()) {
 		$params['action'] = 'gettodoitems';
 		return Whmcs_base::send_request($params);
 	}
@@ -217,7 +217,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Get_To-Do_Items_Statuses
 	*/
 
-	public function whmcs_get_todo_item_statuses($params = array()) {
+	public static function whmcs_get_todo_item_statuses($params = array()) {
 		$params['action'] = 'gettodoitemstatuses';
 		return Whmcs_base::send_request($params);
 	}
@@ -245,7 +245,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Update_To-Do_Item
 	*/
 
-	public function whmcs_update_todo_item($params = array()) {
+	public static function whmcs_update_todo_item($params = array()) {
 		$params['action'] = 'updatetodoitem';
 		return Whmcs_base::send_request($params);
 	}
@@ -268,7 +268,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Get_Staff_Online
 	*/
 
-	public function whmcs_get_staff_online($params = array()) {
+	public static function whmcs_get_staff_online($params = array()) {
 		$params['action'] = 'getstaffonline';
 		return Whmcs_base::send_request($params);
 	}
@@ -291,7 +291,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Get_Stats
 	*/
 
-	public function whmcs_get_stats($params = array()) {
+	public static function whmcs_get_stats($params = array()) {
 		$params['action'] = 'getstats';
 		return Whmcs_base::send_request($params);
 	}
@@ -314,7 +314,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Encrypt_Password
 	*/
 
-	public function whmcs_encrypt_password($params = array()) {
+	public static function whmcs_encrypt_password($params = array()) {
 		$params['action'] = 'encryptpassword';
 		return Whmcs_base::send_request($params);
 	}
@@ -337,7 +337,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Decrypt_Password
 	*/
 
-	public function whmcs_decrypt_password($params = array()) {
+	public static function whmcs_decrypt_password($params = array()) {
 		$params['action'] = 'decryptpassword';
 		return Whmcs_base::send_request($params);
 	}
@@ -362,7 +362,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Add_Banned_IP
 	*/
 
-	public function whmcs_add_banned_ip($params = array()) {
+	public static function whmcs_add_banned_ip($params = array()) {
 		$params['action'] = 'addbannedip';
 		return Whmcs_base::send_request($params);
 	}
@@ -404,7 +404,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Add_Product
 	*/
 
-	public function whmcs_add_product($params = array()) {
+	public static function whmcs_add_product($params = array()) {
 		$params['action'] = 'addproduct';
 		return Whmcs_base::send_request($params);
 	}
@@ -427,7 +427,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Log_Activity
 	*/
 
-	public function whmcs_log_activity($params = array()) {
+	public static function whmcs_log_activity($params = array()) {
 		$params['action'] = 'logactivity';
 		return Whmcs_base::send_request($params);
 	}
@@ -454,7 +454,7 @@ class Whmcs_miscellaneous{
 	* http://docs.whmcs.com/API:Send_Admin_Email
 	*/
 
-	public function whmcs_send_admin_email($params = array()) {
+	public static function whmcs_send_admin_email($params = array()) {
 		$params['action'] = 'sendadminemail';
 		return Whmcs_base::send_request($params);
 	}

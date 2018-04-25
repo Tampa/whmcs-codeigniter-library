@@ -10,7 +10,7 @@
 
 
 require_once "whmcs_base.php";
-class Whmcs_domain_commands{
+class whmcs_domain_commands{
 	
 	// --------------------------------------------------------------------***************
 	/**
@@ -30,7 +30,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Register_Domain
 	*/
 
-	public function whmcs_domain_register($params = array()) {
+	public static function whmcs_domain_register($params = array()) {
 		$params['action'] = 'domainregister';
 		return Whmcs_base::send_request($params);
 	}
@@ -53,7 +53,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Renew_Domain
 	*/
 
-	public function whmcs_domain_renew($params = array()) {
+	public static function whmcs_domain_renew($params = array()) {
 		$params['action'] = 'domainrenew';
 		return Whmcs_base::send_request($params);
 	}
@@ -76,7 +76,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Transfer_Domain
 	*/
 
-	public function whmcs_domain_transfer($params = array()) {
+	public static function whmcs_domain_transfer($params = array()) {
 		$params['action'] = 'domaintransfer';
 		return Whmcs_base::send_request($params);
 	}
@@ -100,7 +100,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Release_Domain
 	*/
 
-	public function whmcs_domain_release($params = array()) {
+	public static function whmcs_domain_release($params = array()) {
 		$params['action'] = 'domainrelease';
 		return Whmcs_base::send_request($params);
 	}
@@ -122,7 +122,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Domain_Locking_Status
 	*/
 
-	public function whmcs_domain_get_locking_status($params = array()) {
+	public static function whmcs_domain_get_locking_status($params = array()) {
 		$params['action'] = 'domaingetlockingstatus';
 		return Whmcs_base::send_request($params);
 	}
@@ -144,7 +144,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Domain_Nameservers
 	*/
 
-	public function whmcs_domain_get_name_servers($params = array()) {
+	public static function whmcs_domain_get_name_servers($params = array()) {
 		$params['action'] = 'domaingetnameservers';
 		return Whmcs_base::send_request($params);
 	}
@@ -166,7 +166,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Get_Domain_WHOIS
 	*/
 
-	public function whmcs_domain_get_whois_info($params = array()) {
+	public static function whmcs_domain_get_whois_info($params = array()) {
 		$params['action'] = 'domaingetwhoisinfo';
 		return Whmcs_base::send_request($params);
 	}
@@ -188,7 +188,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Domain_EPP
 	*/
 
-	public function whmcs_domain_request_epp($params = array()) {
+	public static function whmcs_domain_request_epp($params = array()) {
 		$params['action'] = 'domainrequestepp';
 		return Whmcs_base::send_request($params);
 	}
@@ -211,7 +211,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Toggle_ID_Protect
 	*/
 
-	public function whmcs_domain_toggle_id_protect($params = array()) {
+	public static function whmcs_domain_toggle_id_protect($params = array()) {
 		$params['action'] = 'domaintoggleidprotect';
 		return Whmcs_base::send_request($params);
 	}
@@ -233,7 +233,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Domain_Update_Lock
 	*/
 
-	public function whmcs_domain_update_locking_status($params = array()) {
+	public static function whmcs_domain_update_locking_status($params = array()) {
 		$params['action'] = 'domainupdatelockingstatus';
 		return Whmcs_base::send_request($params);
 	}
@@ -260,7 +260,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Domain_Update_Nameservers
 	*/
 
-	public function whmcs_domain_update_name_servers($params = array()) {
+	public static function whmcs_domain_update_name_servers($params = array()) {
 		$params['action'] = 'domainupdatenameservers';
 		return Whmcs_base::send_request($params);
 	}
@@ -283,7 +283,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Domain_Update_WHOIS
 	*/
 
-	public function whmcs_domain_update_whois_info($params = array()) {
+	public static function whmcs_domain_update_whois_info($params = array()) {
 		$params['action'] = 'domainupdatewhoisinfo';
 		return Whmcs_base::send_request($params);
 	}
@@ -305,7 +305,7 @@ class Whmcs_domain_commands{
 	* http://docs.whmcs.com/API:Domain_WHOIS
 	*/
 
-	public function whmcs_domain_whois($params = array()) {
+	public static function whmcs_domain_whois($params = array()) {
 		$params['action'] = 'domainwhois';
 		return Whmcs_base::send_request($params);
 	}

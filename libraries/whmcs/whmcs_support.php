@@ -10,7 +10,7 @@
 
 
 require_once "whmcs_base.php";
-class Whmcs_support extends WHMCS_Base{
+class whmcs_support extends whmcs_Base{
 	
 	// --------------------------------------------------------------------***************
 	/**
@@ -39,7 +39,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Open_Ticket
 	*/
 
-	public function  whmcs_create_ticket($params = array()) {
+	public static function  whmcs_create_ticket($params = array()) {
 		$params['action'] = 'openticket';
 		return Whmcs_base::send_request($params);
 	}
@@ -68,7 +68,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Reply_Ticket
 	*/
 
-	public function  whmcs_ticket_reply($params = array()) {
+	public static function  whmcs_ticket_reply($params = array()) {
 		$params['action'] = 'addticketreply';
 		return Whmcs_base::send_request($params);
 	}
@@ -97,7 +97,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Tickets
 	*/
 
-	public function  whmcs_get_tickets($params = array()) {
+	public static function  whmcs_get_tickets($params = array()) {
 		$params['action'] = 'gettickets';
 		return Whmcs_base::send_request($params);
 	}
@@ -120,7 +120,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Ticket
 	*/
 
-	public function  whmcs_get_ticket($params = array()) {
+	public static function  whmcs_get_ticket($params = array()) {
 		$params['action'] = 'getticket';
 		return Whmcs_base::send_request($params);
 	}
@@ -149,7 +149,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Update_Ticket
 	*/
 
-	public function  whmcs_update_ticket($params = array()) {
+	public static function  whmcs_update_ticket($params = array()) {
 		$params['action'] = 'updateticket';
 		return Whmcs_base::send_request($params);
 	}
@@ -171,7 +171,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Delete_Ticket
 	*/
 
-	public function  whmcs_delete_ticket($params = array()) {
+	public static function  whmcs_delete_ticket($params = array()) {
 		$params['action'] = 'deleteticket';
 		return Whmcs_base::send_request($params);
 	}
@@ -195,7 +195,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Add_Ticket_Note
 	*/
 
-	public function  whmcs_add_ticket_note($params = array()) {
+	public static function  whmcs_add_ticket_note($params = array()) {
 		$params['action'] = 'addticketnote';
 		return Whmcs_base::send_request($params);
 	}
@@ -217,7 +217,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Ticket_Notes
 	*/
 
-	public function  whmcs_get_ticket_notes($params = array()) {
+	public static function  whmcs_get_ticket_notes($params = array()) {
 		$params['action'] = 'getticketnotes';
 		return Whmcs_base::send_request($params);
 	}
@@ -239,7 +239,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Delete_Ticket_Note
 	*/
 
-	public function  whmcs_delete_ticket_note($params = array()) {
+	public static function  whmcs_delete_ticket_note($params = array()) {
 		$params['action'] = 'deleteticketnote';
 		return Whmcs_base::send_request($params);
 	}
@@ -261,7 +261,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Support_Departments
 	*/
 
-	public function  whmcs_get_support_departments($params = array()) {
+	public static function  whmcs_get_support_departments($params = array()) {
 		$params['action'] = 'getsupportdepartments';
 		return Whmcs_base::send_request($params);
 	}
@@ -283,7 +283,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Support_Statuses
 	*/
 
-	public function  whmcs_get_support_statuses($params = array()) {
+	public static function  whmcs_get_support_statuses($params = array()) {
 		$params['action'] = 'getsupportstatuses';
 		return Whmcs_base::send_request($params);
 	}
@@ -305,7 +305,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Ticket_Predefined_Cats
 	*/
 
-	public function  whmcs_get_ticket_predefined_categories($params = array()) {
+	public static function  whmcs_get_ticket_predefined_categories($params = array()) {
 		$params['action'] = 'getticketpredefinedcats';
 		return Whmcs_base::send_request($params);
 	}
@@ -327,7 +327,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Ticket_Predefined_Replies
 	*/
 
-	public function  whmcs_get_ticket_predefined_replies($params = array()) {
+	public static function  whmcs_get_ticket_predefined_replies($params = array()) {
 		$params['action'] = 'getticketpredefinedreplies';
 		return Whmcs_base::send_request($params);
 	}
@@ -352,7 +352,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Add_Announcement
 	*/
 
-	public function  whmcs_add_announcement($params = array()) {
+	public static function  whmcs_add_announcement($params = array()) {
 		$params['action'] = 'addannouncement';
 		return Whmcs_base::send_request($params);
 	}
@@ -374,7 +374,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Delete_Announcement
 	*/
 
-	public function  whmcs_delete_announcement($params = array()) {
+	public static function  whmcs_delete_announcement($params = array()) {
 		$params['action'] = 'deleteannouncement';
 		return Whmcs_base::send_request($params);
 	}
@@ -400,7 +400,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Update_Announcement
 	*/
 
-	public function  whmcs_update_announcement($params = array()) {
+	public static function  whmcs_update_announcement($params = array()) {
 		$params['action'] = 'updateannouncement';
 		return Whmcs_base::send_request($params);
 	}
@@ -423,7 +423,7 @@ class Whmcs_support extends WHMCS_Base{
 	* http://docs.whmcs.com/API:Get_Announcements
 	*/
 
-	public function  whmcs_get_announcements($params = array()) {
+	public static function  whmcs_get_announcements($params = array()) {
 		$params['action'] = 'getannouncements';
 		return Whmcs_base::send_request($params);
 	}
